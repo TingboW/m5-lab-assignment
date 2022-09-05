@@ -1,6 +1,6 @@
-.App {
+/*.App {
   text-align: center;
-}
+} */
 
 .App-logo {
   height: 40vmin;
@@ -35,4 +35,26 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+input {
+  border-color: aqua;
+}
+
+
+
+h1 {
+  margin: 20px;
+  padding: 10px;
+  height: 80px;;
+}
+
+#items {
+  border-bottom: 1px;
+  border-color: darkgrey;
+  border-bottom-style: solid;
+  margin-left: 45px;
+  padding-top: 1em;
+  padding-bottom: 1em;
+
 }
