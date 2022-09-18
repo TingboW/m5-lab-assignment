@@ -5,6 +5,7 @@ import { faShoppingCart, faRegistered,} from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import DisplayProducts from "./displayProducts";
 import Cart from "./Cart";
+import CheckOut from './CheckOut'; 
 
 export default function Navbar (props) {
     return (
@@ -44,6 +45,11 @@ export default function Navbar (props) {
                 />
             } 
             />
+        <Route path="/checkout" 
+                element={
+                    <CheckOut />
+                } 
+                />
         </Routes>
         </Router>
     );
