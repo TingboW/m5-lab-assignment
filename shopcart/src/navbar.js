@@ -34,6 +34,8 @@ export default function Navbar (props) {
                      products={props.prods}
                      increaseBtn={props.increaseBtn}
                      decreaseBtn={props.decreaseBtn}
+                     onSort={props.onSort}
+                     sortType={props.sortType}
         />
         } 
         />

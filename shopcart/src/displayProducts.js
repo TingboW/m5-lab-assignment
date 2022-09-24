@@ -16,13 +16,25 @@ export default function DisplayProducts(props) {
     };
 
     return (
-    <div>
+   <div>
+    <div className="p-5">
+        <span>Sort Price By: </span>
+        <select OnChange={(e) => props.onSort(props.products, e.target.value)}>
+            <option value="">Normal</option>
+            <option value="lowest">Lowest</option>
+            <option value="highest">Highest</option>
+        </select>
+   </div>
+   <div>
         {props.products.map((product) => {
          return (
           <>
           <div key={product.id} className="border border-1 p-3">
                  <h3 className="mx-5">
                      {product.title}
+                     <span className="text-danger mx-3 fs-5">
+                    ${product.price}
+                  </span>
                  </h3>
                  <img
                      onClick={() => handleShow(product)}
@@ -67,6 +79,7 @@ export default function DisplayProducts(props) {
                 );
              })}
          </div>
+    </div>
     );
 }
 

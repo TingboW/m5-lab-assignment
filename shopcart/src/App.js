@@ -28,6 +28,24 @@ class App extends Component {
     }
   };
 
+  onSort = (listNum, sortType) => {
+    switch (sortType){
+      case 'lowest':
+        listNum.sort(function(a,b){
+          return a.price - b.price
+        });
+      case 'highest':
+        listNum.sort(function(a,b){
+          return b.price - a.price
+        });
+      default:
+        listNum.sort(function(a,b){
+          return a.id - b.id
+        });
+    }
+    this.setState({ itmes: listNum});
+  };
+
 render () {
   return (
     { /* Output final view */},
@@ -39,6 +57,7 @@ render () {
           prods={this.state.products}
           increaseBtn={this.increaseBtn}
           decreaseBtn={this.decreaseBtn}
+          onSort={this.onSort}
    />
       </div>
     );
