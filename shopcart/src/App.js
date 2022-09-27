@@ -34,16 +34,18 @@ class App extends Component {
         listNum.sort(function(a,b){
           return a.price - b.price
         });
+        break;
       case 'highest':
         listNum.sort(function(a,b){
           return b.price - a.price
         });
+        break;
       default:
         listNum.sort(function(a,b){
           return a.id - b.id
         });
     }
-    this.setState({ items: listNum});
+    this.setState({ products: listNum});
   };
 
 render () {
