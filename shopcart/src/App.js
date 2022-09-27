@@ -43,7 +43,7 @@ class App extends Component {
           return a.id - b.id
         });
     }
-    this.setState({ itmes: listNum});
+    this.setState({ items: listNum});
   };
 
 render () {
